@@ -23,6 +23,14 @@
 # currently contain all of the bitmaps at xhdpi density so
 # we do this little trick to fall back to the hdpi version
 # if the xhdpi doesn't exist.
+ifeq ($(TARGET_PREBUILT_KERNEL),)
+LOCAL_KERNEL := device/asus/flo-kernel/kernel
+else
+LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+endif
+PRODUCT_COPY_FILES := \
+	$(LOCAL_KERNEL):kernel
+
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
