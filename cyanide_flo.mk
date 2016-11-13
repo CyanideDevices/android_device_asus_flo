@@ -9,7 +9,7 @@ TARGET_SCREEN_WIDTH := 1200
 #$(call inherit-product, vendor/cyanide/config/nfc_enhanced.mk)
 
 # Inherit from the common Open Source product configuration
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/generic_no_telephony.mk)
 
 # Inherit cyanide common configuration
 $(call inherit-product, vendor/cyanide/config/common.mk)
